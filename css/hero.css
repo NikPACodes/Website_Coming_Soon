@@ -1,0 +1,407 @@
+/*Инженерная схема (декоративная)*/
+/*Все узлы диаграммы декоративные и без JS.*/
+
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.17fr) minmax(420px, .83fr);
+    gap: 60px;
+    align-items: center;
+    min-height: 735px;
+    padding-top: 77px;
+    padding-bottom: 87px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(ellipse, var(--glow), transparent 63%);
+    pointer-events: none;
+    filter: blur(24px);
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.status-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 32px;
+    font: 600 10px ui-monospace, Consolas, monospace;
+    letter-spacing: .09em;
+    color: var(--accent);
+}
+
+.status-dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #8bdfd2;
+    box-shadow: 0 0 0 5px rgba(139, 223, 210, .1), 0 0 18px rgba(139, 223, 210, .2);
+}
+
+.status-mini {
+    margin-left: 9px;
+    color: var(--muted);
+}
+
+.hero-overline {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-soft);
+    margin: 26px 0 19px;
+}
+
+.hero h1 {
+    font-size: clamp(56px, 5.25vw, 85px);
+    line-height: 1.065;
+    letter-spacing: -.067em;
+    font-weight: 750;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.hero-gradient {
+    background: linear-gradient(100deg, #b9b6ff, #7c7bf4 84%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.hero-description {
+    max-width: 575px;
+    color: var(--text-soft);
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 30px 0 0;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.primary-button {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    min-height: 54px;
+    border-radius: 8px;
+    background: linear-gradient(120deg, #b6b2ff, #8c86f9);
+    padding: 9px 9px 9px 21px;
+    font-size: 13px;
+    font-weight: 750;
+    color: #10152b;
+}
+
+.button-symbol {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(18, 21, 53, .12);
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.secondary-button {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 13px;
+    font-weight: 650;
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    padding: 0 18px;
+    min-height: 54px;
+}
+
+.secondary-button:hover {
+    border-color: var(--accent);
+}
+
+.secondary-button span:last-child {
+    color: var(--accent);
+    font-size: 19px;
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 52px;
+    font: 10px/1.7 ui-monospace, Consolas, monospace;
+    color: var(--muted);
+    letter-spacing: .01em;
+}
+
+.note-rule {
+    height: 1px;
+    width: 25px;
+    background: var(--accent);
+}
+
+.hero-visual {
+    width: 100%;
+    min-height: 506px;
+    background: radial-gradient(circle at 50% 48%, var(--glow), transparent 50%), var(--panel);
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 24px 85px rgba(0, 0, 0, .23);
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+}
+
+.visual-header, .visual-footer {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0 22px;
+    font: 10px ui-monospace, Consolas, monospace;
+    letter-spacing: .055em;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.visual-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.visual-footer {
+    border-top: 1px solid var(--line);
+}
+
+.visual-header-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.visual-header-dots i {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #f5a39f;
+}
+
+.visual-header-dots i:nth-child(2) {
+    background: #ffd38a;
+}
+
+.visual-header-dots i:nth-child(3) {
+    background: #89d6c5;
+}
+
+.visual-stage {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.diagram-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, var(--grid) 1px, transparent 1px), linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: radial-gradient(ellipse at center, black 15%, transparent 78%);
+}
+
+/* Decorative layers are CSS-only: none of them show real backend activity. */
+.diagram-orbit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25%;
+    border: 1px dashed rgba(154, 144, 255, .3);
+    pointer-events: none;
+}
+
+.orbit-one {
+    width: 330px;
+    height: 330px;
+    animation: slow-spin 90s linear infinite;
+}
+
+.orbit-two {
+    width: 270px;
+    height: 270px;
+    animation: reverse-spin 60s linear infinite;
+    border-style: solid;
+    border-color: rgba(154, 144, 255, .18);
+}
+
+.orbit-three {
+    width: 210px;
+    height: 210px;
+    border-color: rgba(154, 144, 255, .38);
+    animation: slow-spin 30s linear infinite;
+}
+
+.diagram-axis {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.axis-horizontal {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    background: linear-gradient(90deg, transparent, rgba(148, 142, 250, .45), transparent);
+}
+
+.axis-vertical {
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    background: linear-gradient(0deg, transparent, rgba(148, 142, 250, .35), transparent);
+}
+
+.diagram-cross {
+    position: absolute;
+    color: #3dad2d;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.cross-one {
+    right: 10%;
+    top: 10%;
+}
+
+.cross-two {
+    left: 40%;
+    bottom: 5%;
+}
+
+.center-core {
+    position: relative;
+    z-index: 4;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--panel-2);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    box-shadow: 0 0 0 9px rgba(146, 139, 255, .055), 0 0 75px var(--glow);
+}
+
+.core-status {
+    color: #a9e9df;
+    font: 9px ui-monospace, Consolas, monospace;
+    letter-spacing: .04em;
+}
+
+.core-image {
+    width: 120px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.core-label {
+    font: 8px ui-monospace, Consolas, monospace;
+    letter-spacing: .15em;
+    color: var(--text-soft);
+}
+
+.floating-node {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: var(--bg-2);
+    border: 1px solid var(--line-strong);
+    padding: 12px 16px;
+    min-width: 112px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .14);
+    border-radius: 7px;
+}
+
+.node-count {
+    font: 9px ui-monospace, Consolas, monospace;
+    color: var(--accent);
+}
+
+.floating-node strong {
+    font-size: 13px;
+    letter-spacing: .035em;
+}
+
+.floating-node small {
+    font: 8px ui-monospace, Consolas, monospace;
+    color: var(--muted);
+    letter-spacing: .07em;
+}
+
+.node-api {
+    top: 30px;
+    left: 20px;
+}
+
+.node-data {
+    right: 21px;
+    top: 91px;
+}
+
+.node-async {
+    bottom: 24px;
+    left: 25px;
+}
+
+.diagram-spark {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #aaa4ff;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 18px #a6a1ff;
+    animation: glimmer 3.5s ease-in-out infinite;
+}
+
+.spark-a {
+    left: 50%;
+    top: 7%;
+}
+
+.spark-b {
+    left: 13%;
+    top: 49%;
+    animation-delay: 1.4s;
+}
+
+.spark-c {
+    right: 14%;
+    bottom: 19%;
+    animation-delay: 2.5s;
+}
+
+.visual-footer-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #89d6c5;
+    margin-right: 7px;
+}
