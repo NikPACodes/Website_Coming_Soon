@@ -1,0 +1,568 @@
+/*Анимация, адаптивный дизайн и настройки движения*/
+/*Media упорядочены от десктопных версий к версиям для узких экранов.*/
+
+@keyframes slow-spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes reverse-spin {
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes glimmer {
+    0%, 100% {
+        opacity: .38;
+        transform: scale(.75);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.35);
+    }
+}
+
+/*Компактные настольные компьютеры и небольшие ноутбуки: предотвращение перегруженности заголовка.*/
+@media (max-width:1200px) {
+    .container {
+        width: calc(100% - 60px);
+    }
+
+    .header-inner {
+        gap: 14px;
+    }
+
+    .brand-name {
+        width: 162px;
+    }
+
+    .brand-descriptor {
+        font-size: 8px;
+        letter-spacing: .13em;
+    }
+
+    .desktop-nav {
+        gap: 18px;
+    }
+
+    .desktop-nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        gap: 28px;
+        grid-template-columns: minmax(0, 1fr) minmax(380px, .88fr);
+    }
+
+    .hero h1 {
+        font-size: clamp(47px, 5vw, 72px);
+    }
+
+    .hero-visual {
+        min-height: 470px;
+    }
+
+    .visual-stage {
+        height: 364px;
+    }
+
+    .orbit-one {
+        width: 305px;
+        height: 305px;
+    }
+
+    .contact-cta {
+        gap: 11px;
+        padding: 0 15px;
+    }
+}
+
+/*Планшет: заменяет десктопную навигацию на мобильное меню.*/
+@media (max-width:1000px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: inline-flex;
+    }
+
+    .header-actions {
+        margin-left: auto;
+    }
+
+    .mobile-toggle[aria-expanded=true] .hamburger {
+        display: none;
+    }
+
+    .mobile-toggle[aria-expanded=true] .close-lines {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 30px 23px;
+        border-top: 1px solid var(--line);
+        background: var(--header-bg);
+    }
+
+    .mobile-nav a {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-soft);
+    }
+
+    .mobile-nav a:hover {
+        color: var(--accent);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding-top: 85px;
+        padding-bottom: 80px;
+        gap: 65px;
+    }
+
+    .hero h1 {
+        font-size: clamp(60px, 8vw, 88px);
+    }
+
+    .hero-visual {
+        max-width: 660px;
+        min-height: 506px;
+    }
+
+    .visual-stage {
+        height: 400px;
+    }
+
+    .ticker-inner {
+        justify-content: center;
+        flex-wrap: wrap;
+        white-space: normal;
+        gap: 18px 23px;
+        padding: 19px 0;
+    }
+
+    .upcoming {
+        padding-block: 90px;
+    }
+
+    .section-head {
+        align-items: start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .section-head>p {
+        max-width: 660px;
+    }
+
+    .preview-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .preview-card:last-child {
+        grid-column: span 2;
+    }
+
+    .preview-card {
+        min-height: 260px;
+    }
+
+    .contact-panel {
+        align-items: start;
+        flex-direction: column;
+    }
+}
+
+/*Телефоны: расположение контента друг под другом.*/
+@media (max-width:650px) {
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .header-inner {
+        min-height: 72px;
+        gap: 8px;
+    }
+
+    .brand {
+        gap: 8px;
+    }
+
+    .brand-badge {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+        border-radius: 9px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        max-height: 29px;
+    }
+
+    .brand-name {
+        width: 123px;
+    }
+
+    .brand-descriptor {
+        font-size: 6.6px;
+        letter-spacing: .05em;
+    }
+
+    .brand-words {
+        gap: 3px;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .utility-btn {
+        min-width: 34px;
+        min-height: 35px;
+        padding: 0 6px;
+        border-radius: 6px;
+    }
+
+    .utility-btn svg {
+        width: 17px;
+    }
+
+    .lang-toggle {
+        min-width: 40px;
+        gap: 4px;
+        font-size: 10px;
+    }
+
+    .lang-toggle svg {
+        width: 10px;
+    }
+
+    .contact-cta {
+        display: none;
+    }
+
+    .mobile-nav {
+        padding-inline: 18px;
+    }
+
+    .hero {
+        padding-top: 70px;
+        padding-bottom: 67px;
+        gap: 52px;
+    }
+
+    .status-line {
+        font-size: 9px;
+        gap: 8px;
+        letter-spacing: 0;
+    }
+
+    .status-mini {
+        display: none;
+    }
+
+    .hero-overline {
+        font-size: 13px;
+        margin: 25px 0 15px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 9.4vw, 68px);
+        line-height: 1.12;
+        letter-spacing: -.068em;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.8;
+        margin: 25px 0;
+    }
+
+    .hero-actions {
+        gap: 10px;
+    }
+
+    .primary-button {
+        min-height: 49px;
+        font-size: 12px;
+        padding-left: 14px;
+        gap: 16px;
+    }
+
+    .button-symbol {
+        width: 33px;
+        height: 33px;
+    }
+
+    .secondary-button {
+        min-height: 49px;
+        font-size: 12px;
+        padding-inline: 12px;
+        gap: 11px;
+    }
+
+    .hero-note {
+        font-size: 9px;
+        margin-top: 30px;
+    }
+
+    .hero-visual {
+        min-height: 407px;
+    }
+
+    .visual-header, .visual-footer {
+        height: 47px;
+        padding-inline: 13px;
+        font-size: 8px;
+    }
+
+    .visual-stage {
+        height: 310px;
+    }
+
+    .orbit-one {
+        width: 260px;
+        height: 260px;
+    }
+
+    .orbit-two {
+        width: 208px;
+        height: 208px;
+    }
+
+    .orbit-three {
+        width: 160px;
+        height: 160px;
+    }
+
+    .center-core {
+        width: 125px;
+        height: 132px;
+        gap: 6px;
+    }
+
+    .core-image {
+        width: 94px;
+        height: 53px;
+    }
+
+    .core-status {
+        font-size: 7px;
+    }
+
+    .core-label {
+        font-size: 6px;
+    }
+
+    .floating-node {
+        min-width: 77px;
+        padding: 8px 9px;
+        gap: 3px;
+    }
+
+    .floating-node strong {
+        font-size: 10px;
+    }
+
+    .floating-node small {
+        font-size: 7px;
+    }
+
+    .node-count {
+        font-size: 8px;
+    }
+
+    .node-api {
+        left: 7px;
+        top: 15px;
+    }
+
+    .node-data {
+        right: 7px;
+        top: 75px;
+    }
+
+    .node-async {
+        left: 10px;
+        bottom: 12px;
+    }
+
+    .ticker-inner {
+        font-size: 9px;
+        gap: 12px 17px;
+    }
+
+    .asterisk {
+        font-size: 15px;
+    }
+
+    .upcoming {
+        padding-block: 76px;
+    }
+
+    .section-head h2 {
+        font-size: 37px;
+    }
+
+    .preview-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .preview-card:last-child {
+        grid-column: auto;
+    }
+
+    .preview-card {
+        min-height: 235px;
+        padding: 22px;
+    }
+
+    .preview-card h3 {
+        margin-top: 25px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding-block: 48px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+    }
+
+    .about-content>p {
+        font-size: 13px;
+    }
+
+    .contact-panel {
+        padding-block: 76px;
+    }
+
+    .contact-panel h2 {
+        font-size: 36px;
+    }
+
+    .contact-large {
+        font-size: 13px;
+    }
+
+    .footer-inner {
+        padding-block: 22px;
+        min-height: 0;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-inner>span {
+        order: 3;
+        width: 100%;
+    }
+}
+
+/* Очень узкие телефоны (320–380px) */
+@media (max-width:380px) {
+    .brand-name {
+        width: 106px;
+    }
+
+    .brand-descriptor {
+        font-size: 5.8px;
+    }
+
+    .header-actions {
+        gap: 4px;
+    }
+
+    .utility-btn {
+        padding: 0 4px;
+        min-width: 32px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-button, .secondary-button {
+        justify-content: space-between;
+    }
+
+    .ticker-inner {
+        gap: 12px;
+    }
+
+    .floating-node {
+        min-width: 71px;
+    }
+}
+
+/* Специальные возможности: отключение декоративной анимации. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* Обратный отчет: настройка интервала между ячейками и типографики для небольших экранов. */
+@media (max-width: 650px) {
+    .launch-countdown {
+        padding: 16px 15px;
+        margin: 26px 0 22px;
+    }
+
+    .countdown-unit {
+        padding-inline: 8px;
+        gap: 7px;
+    }
+
+    .countdown-number {
+        font-size: clamp(25px, 6.8vw, 36px);
+    }
+
+    .countdown-label {
+        font-size: 8px;
+        letter-spacing: .045em;
+    }
+
+    .countdown-heading {
+        gap: 4px 12px;
+        margin-bottom: 11px;
+    }
+}
+
+@media (max-width: 380px) {
+    .launch-countdown {
+        padding: 15px 12px;
+    }
+
+    .countdown-unit {
+        padding-inline: 6px;
+    }
+
+    .countdown-number {
+        font-size: 25px;
+    }
+}

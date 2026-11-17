@@ -1,0 +1,212 @@
+/*Статический сайт, без зависимостей, тёмная/светлая темы и адаптивная вёрстка.*/
+/*Зашоловок, logo и навигаия.*/
+
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    background: var(--header-bg);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line-strong);
+    box-shadow: 0 12px 45px rgba(0, 0, 0, .10);
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-2), transparent);
+    opacity: .65;
+    pointer-events: none;
+}
+
+.header-inner {
+    min-height: 88px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    flex: 0 0 auto;
+}
+
+.brand-badge {
+    display: grid;
+    place-items: center;
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    background: radial-gradient(circle at 30% 10%, rgba(123, 116, 252, .25), transparent 60%), #151e34;
+    border: 1px solid #7774cd;
+    border-radius: 12px;
+    box-shadow: 0 0 24px rgba(115, 110, 255, .12), inset 0 0 15px rgba(115, 110, 255, .1);
+}
+
+.brand-mark {
+    width: 46px;
+    max-height: 34px;
+    height: auto;
+    object-fit: contain;
+}
+
+.brand-words {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.brand-name {
+    width: 191px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+}
+
+.brand-descriptor {
+    font: 500 9px/1.2 ui-monospace, "SFMono-Regular", Consolas, monospace;
+    letter-spacing: .19em;
+    color: var(--text-soft);
+    white-space: nowrap;
+}
+
+.light-art {
+    display: none;
+}
+
+html[data-theme=light] .dark-art {
+    display: none;
+}
+
+html[data-theme=light] .light-art {
+    display: block;
+}
+
+html[data-theme=light] .brand-badge {
+    background: #f0eefb;
+    border-color: #a6a1e8;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 2.4vw, 42px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.desktop-nav a {
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-soft);
+    transition: color .2s;
+}
+
+.desktop-nav a:hover {
+    color: var(--accent);
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.utility-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid var(--line-strong);
+    background: var(--panel);
+    color: var(--fg);
+    border-radius: 8px;
+    min-height: 43px;
+    min-width: 43px;
+    padding: 0 10px;
+    transition: border-color .2s, background .2s;
+}
+
+.utility-btn:hover {
+    border-color: var(--accent);
+}
+
+.utility-btn svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.lang-toggle {
+    min-width: 66px;
+    font: 600 11px ui-monospace, Consolas, monospace;
+}
+
+.lang-toggle svg {
+    width: 12px;
+    color: var(--accent);
+}
+
+.moon-icon {
+    display: none;
+}
+
+html[data-theme=light] .sun-icon {
+    display: none;
+}
+
+html[data-theme=light] .moon-icon {
+    display: block;
+}
+
+.contact-cta {
+    display: inline-flex;
+    min-height: 43px;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: linear-gradient(125deg, #b7b3ff, #8984f9);
+    color: #101427;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 750;
+    box-shadow: 0 6px 20px rgba(134, 127, 245, .13);
+    white-space: nowrap;
+}
+
+.contact-cta:hover, .primary-button:hover {
+    filter: brightness(1.08);
+}
+
+.contact-cta span:last-child {
+    font-size: 18px;
+}
+
+.mobile-toggle {
+    display: none;
+}
+
+.close-lines {
+    display: none;
+}
+
+.mobile-nav[hidden] {
+    display: none !important;
+}
+
+.mobile-nav {
+    display: none;
+}

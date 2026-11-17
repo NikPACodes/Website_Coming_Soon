@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#0c1222">
+        <meta name="description" content="NikPACore — персональный сайт Николая Петухова, Python Backend Engineer. Сайт готовится к запуску. Проекты доступны на GitHub.">
+        <meta name="robots" content="index,follow">
+        <meta name="color-scheme" content="dark light">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="NikPACore — Скоро запуск">
+        <meta property="og:description" content="Python Backend Engineering · Portfolio · Projects. Сайт в разработке.">
+        <meta property="og:url" content="https://nikpacore.ru/">
+        <meta property="og:image" content="https://nikpacore.ru/assets/og-cover.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="NikPACore — Python Backend Engineering">
+        <meta property="og:locale" content="ru_RU">
+        <link rel="canonical" href="https://nikpacore.ru/">
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/hero.css">
+        <link rel="stylesheet" href="css/countdown.css">
+        <link rel="stylesheet" href="css/sections.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <script src="js/app.js" defer></script>
+        <title>NikPACore — Скоро запуск | Python Backend Engineering</title>
+    </head>
+    <body>
+        <a href="#main" class="skip-link" data-i18n="skip">Перейти к содержимому</a>
+        <header class="header" id="top">
+            <div class="header-inner container">
+                <a href="#top" class="brand" aria-label="NikPACore — на главную">
+                    <span class="brand-badge" aria-hidden="true">
+                        <img class="brand-mark dark-art" src="assets/np-mark-dark.png" alt="" width="47" height="32">
+                        <img class="brand-mark light-art" src="assets/np-mark-light.png" alt="" width="47" height="32">
+                    </span>
+                    <span class="brand-words">
+                        <img class="brand-name dark-art" src="assets/np-wordmark-dark.png" alt="NikPACore" width="201" height="40">
+                        <img class="brand-name light-art" src="assets/np-wordmark-light.png" alt="NikPACore" width="201" height="40">
+                        <span class="brand-descriptor">PYTHON BACKEND ENGINEER</span>
+                    </span>
+                </a>
+                <nav class="desktop-nav" aria-label="Основная навигация">
+                    <a href="#services" data-i18n="navServices">Услуги</a>
+                    <a href="#projects" data-i18n="navProjects">Проекты</a>
+                    <a href="#lab" data-i18n="navLab">Лаборатория</a>
+                    <a href="#about" data-i18n="navAbout">Обо мне</a>
+                </nav>
+                <div class="header-actions">
+                    <button type="button" class="utility-btn lang-toggle" id="lang-toggle" aria-label="Switch to English">
+                        <span id="lang-label">EN</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <button type="button" class="utility-btn theme-toggle" id="theme-toggle" aria-label="Включить светлую тему" aria-pressed="false">
+                        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/>
+                            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.5 14.7A8.5 8.5 0 0 1 9.3 3.5 8.5 8.5 0 1 0 20.5 14.7Z"/>
+                        </svg>
+                    </button>
+                    <a class="contact-cta" href="#contact">
+                        <span data-i18n="navContact">Связаться</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                    <button type="button" class="utility-btn mobile-toggle" id="mobile-toggle" aria-label="Открыть меню" aria-controls="mobile-nav" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path class="hamburger" d="M4 6h16M4 12h16M4 18h16"/>
+                            <path class="close-lines" d="m5 5 14 14M19 5 5 19"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
+                <a href="#services" data-i18n="navServices">Услуги</a>
+                <a href="#projects" data-i18n="navProjects">Проекты</a>
+                <a href="#lab" data-i18n="navLab">Лаборатория</a>
+                <a href="#about" data-i18n="navAbout">Обо мне</a>
+                <a href="#contact" data-i18n="navContact">Связаться</a>
+            </nav>
+        </header>
+        <main id="main">
+            <section class="hero container" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <div class="status-line">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span data-i18n="eyebrow">NIKPACORE.RU / SITE IN DEVELOPMENT</span>
+                        <span class="status-mini">// 001</span>
+                    </div>
+                    <p class="hero-overline" data-i18n="intro">Николай Петухов · Python Backend Engineer</p>
+                    <h1 id="hero-title">
+                        <span data-i18n="heroOne">Сайт готовится</span>
+                        <br>
+                        <span class="hero-gradient" data-i18n="heroTwo">к запуску<span class="hero-period">.</span></span>
+                    </h1>
+                    <p class="hero-description" data-i18n="description">Здесь появятся мои проекты, инженерные кейсы и заметки о backend-разработке. Пока пространство собирается, исходный код уже доступен на GitHub.</p>
+                    <section class="launch-countdown" aria-labelledby="countdown-title">
+                        <div class="countdown-heading">
+                            <span class="countdown-heading-title" id="countdown-title">
+                                <span class="countdown-heading-marker" aria-hidden="true">↳</span>
+                                <span data-i18n="countdownHeading">ДО 1 ДЕКАБРЯ</span>
+                            </span>
+                        </div>
+                        <div class="countdown-values" id="countdown-values" role="timer" aria-live="off" aria-label="Время до 1 декабря">
+                            <div class="countdown-unit"><span class="countdown-number" id="countdown-days">--</span><span class="countdown-label" data-i18n="countdownDays">ДНЕЙ</span></div>
+                            <div class="countdown-unit"><span class="countdown-number" id="countdown-hours">--</span><span class="countdown-label" data-i18n="countdownHours">ЧАСОВ</span></div>
+                            <div class="countdown-unit"><span class="countdown-number" id="countdown-minutes">--</span><span class="countdown-label" data-i18n="countdownMinutes">МИНУТ</span></div>
+                            <div class="countdown-unit"><span class="countdown-number" id="countdown-seconds">--</span><span class="countdown-label" data-i18n="countdownSeconds">СЕКУНД</span></div>
+                        </div>
+                        <p class="countdown-finished" id="countdown-finished" role="status" aria-live="polite" hidden data-i18n="countdownFinished">Отсчёт завершён.</p>
+                        <noscript><p class="countdown-noscript">Для работы счётчика включите JavaScript.</p></noscript>
+                    </section>
+                    <div class="hero-actions">
+                        <a class="primary-button" href="https://github.com/NikPACodes" target="_blank" rel="noopener noreferrer">
+                            <span data-i18n="exploreGithub">Посмотреть GitHub</span>
+                            <span class="button-symbol" aria-hidden="true">↗</span>
+                        </a>
+                        <a class="secondary-button" href="#upcoming">
+                            <span data-i18n="whatsNext">Что здесь будет</span>
+                            <span aria-hidden="true">↓</span>
+                        </a>
+                    </div>
+                    <div class="hero-note">
+                        <span class="note-rule" aria-hidden="true"></span>
+                        <span data-i18n="note">Надёжные системы начинаются с продуманных решений.</span>
+                    </div>
+                </div>
+                <div class="hero-visual" role="img" aria-label="Схематичная иллюстрация компонентов backend: API, данные и фоновые задачи">
+                    <div class="visual-header">
+                        <span class="visual-header-dots"><i></i><i></i><i></i></span>
+                        <span>BACKEND / SYSTEMS</span>
+                        <span>DESIGN MODE</span>
+                    </div>
+                    <div class="visual-stage" aria-hidden="true">
+                        <div class="diagram-grid"></div>
+                        <div class="diagram-cross cross-one">+</div>
+                        <div class="diagram-cross cross-two">+</div>
+                        <div class="diagram-orbit orbit-one"></div>
+                        <div class="diagram-orbit orbit-two"></div>
+                        <div class="diagram-orbit orbit-three"></div>
+                        <span class="diagram-axis axis-horizontal"></span>
+                        <span class="diagram-axis axis-vertical"></span>
+                        <div class="center-core">
+                            <span class="core-status">● NIKPA / CORE</span>
+                            <img class="core-image dark-art" src="assets/np-mark-dark.png" alt="">
+                            <img class="core-image light-art" src="assets/np-mark-light.png" alt="">
+                            <span class="core-label">ENGINEERING SYSTEMS</span>
+                        </div>
+                        <div class="floating-node node-api">
+                            <span class="node-count">01</span>
+                            <strong>API</strong>
+                            <small>CONTRACT</small>
+                        </div>
+                        <div class="floating-node node-data">
+                            <span class="node-count">02</span>
+                            <strong>DATA</strong>
+                            <small>STORAGE</small>
+                        </div>
+                        <div class="floating-node node-async">
+                            <span class="node-count">03</span>
+                            <strong>ASYNC</strong>
+                            <small>WORKERS</small>
+                        </div>
+                        <span class="diagram-spark spark-a"></span>
+                        <span class="diagram-spark spark-b"></span>
+                        <span class="diagram-spark spark-c"></span>
+                    </div>
+                    <div class="visual-footer">
+                        <span><span class="visual-footer-dot"></span>NIKPACORE / SYSTEMS BY DESIGN</span>
+                        <span>VER. 02</span>
+                    </div>
+                </div>
+            </section>
+            <div class="ticker-band" aria-label="Направления разработки">
+                <div class="container ticker-inner">
+                    <span>PYTHON BACKEND</span>
+                    <span class="asterisk">✳</span>
+                    <span>REST API</span>
+                    <span class="asterisk">✳</span>
+                    <span>POSTGRESQL</span>
+                    <span class="asterisk">✳</span>
+                    <span>ASYNC PROCESSING</span>
+                    <span class="asterisk">✳</span>
+                    <span>ARCHITECTURE</span>
+                </div>
+            </div>
+            <section class="upcoming container" id="upcoming" aria-labelledby="upcoming-title">
+                <div class="section-head">
+                    <div>
+                        <p class="section-counter">01 / <span data-i18n="sectionEyebrow">СКОРО НА САЙТЕ</span></p>
+                        <h2 id="upcoming-title" data-i18n="sectionTitle">Что появится здесь</h2>
+                    </div>
+                    <p data-i18n="sectionLead">Здесь будут реальные проекты, инженерные решения и практические разборы.</p>
+                </div>
+                <div class="preview-grid">
+                    <article class="preview-card" id="projects">
+                        <div class="preview-top">
+                            <span>01 / PORTFOLIO</span>
+                            <span class="preview-icon" aria-hidden="true">◈</span>
+                        </div>
+                        <h3 data-i18n="cardProjectsTitle">Проекты и кейсы</h3>
+                        <p data-i18n="cardProjectsDesc">Реальные репозитории, задачи, выбранные технические решения и их ограничения.</p>
+                        <a href="https://github.com/NikPACodes?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="cardProjectsLink">Пока на GitHub</span> ↗</a>
+                    </article>
+                    <article class="preview-card" id="lab">
+                        <div class="preview-top">
+                            <span>02 / ENGINEERING LAB</span>
+                            <span class="preview-icon" aria-hidden="true">⌘</span>
+                        </div>
+                        <h3 data-i18n="cardLabTitle">Инженерная лаборатория</h3>
+                        <p data-i18n="cardLabDesc">Интерактивные сценарии backend-архитектуры и разбор инженерных компромиссов.</p>
+                        <span class="preview-label" data-i18n="comingSoon">В разработке</span>
+                    </article>
+                    <article class="preview-card" id="services">
+                        <div class="preview-top">
+                            <span>03 / COLLABORATION</span>
+                            <span class="preview-icon" aria-hidden="true">↗</span>
+                        </div>
+                        <h3 data-i18n="cardServicesTitle">Услуги и сотрудничество</h3>
+                        <p data-i18n="cardServicesDesc">Python backend, API, интеграции, PostgreSQL и фоновые задачи.</p>
+                        <a href="#contact"><span data-i18n="cardServicesLink">Как связаться</span> ↗</a>
+                    </article>
+                </div>
+            </section>
+            <section class="about-strip" id="about">
+                <div class="container about-content">
+                    <div>
+                        <p class="section-counter">02 / <span data-i18n="aboutEyebrow">ОБО МНЕ</span></p>
+                        <h2 data-i18n="aboutTitle">За кодом — инженер.</h2>
+                    </div>
+                    <p data-i18n="aboutText">Я Николай Петухов. Занимаюсь Python backend-разработкой, проектированием API и работой с данными. NikPACore станет единым пространством для моих проектов и профессионального опыта.</p>
+                </div>
+            </section>
+            <section class="contact-panel container" id="contact" aria-labelledby="contact-title">
+                <div>
+                    <p class="section-counter">03 / CONTACT</p>
+                    <h2 id="contact-title" data-i18n="contactTitle">Пока сайт строится —<br>давай оставаться на связи.</h2>
+                    <p data-i18n="contactDescription">Мой GitHub уже открыт. Там можно посмотреть исходники и развитие проектов.</p>
+                </div>
+                <a href="https://github.com/NikPACodes" class="contact-large" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container footer-inner">
+                <a href="#top" class="footer-logo">NP<span>/</span><span class="footer-name">NIKPACORE</span></a>
+                <span>© <span id="year">2026</span> Nikolay Petukhov</span>
+                <a href="#top" class="back-top"><span data-i18n="backTop">Наверх</span> ↑</a>
+            </div>
+        </footer>
+    </body>
+</html>
